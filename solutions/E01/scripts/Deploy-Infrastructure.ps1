@@ -7,3 +7,5 @@ param (
 New-AzResourceGroupDeployment `
     -ResourceGroupName $resourceGroupName `
     -TemplateFile './templates/app.bicep'
+
+# test comment
