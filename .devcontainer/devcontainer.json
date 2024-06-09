@@ -1,7 +1,29 @@
 {
   "image": "mcr.microsoft.com/azure-powershell",
+  "customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-vscode.azurecli",
+				"ms-dotnettools.vscode-dotnet-runtime",
+				"ms-azuretools.vscode-bicep",
+			        "ms-azuretools.vscode-docker",
+			        "ms-vsliveshare.vsliveshare",
+				"msazurermtools.azurerm-vscode-tools",
+			        "visualstudioexptteam.vscodeintellicode",
+				"editorconfig.editorconfig"
+	   		]
+      }
+  },
   "features": {
-    "ghcr.io/devcontainers/features/azure-cli:1": {},
-    "ghcr.io/devcontainers/features/powershell:1": {}
+		"ghcr.io/devcontainers/features/azure-cli:latest": {
+			"version": "latest",
+			"extensions": "amg,aks-preview,containerapp",
+			"installBicep": true
+		},
+    "ghcr.io/devcontainers/features/powershell:1": {
+      "installBicep": true
+    }
   }
 }
