@@ -1,9 +1,7 @@
 {
   "image": "mcr.microsoft.com/azure-powershell",
   "customizations": {
-		// Configure properties specific to VS Code.
 		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-vscode.azurecli",
 				"ms-dotnettools.vscode-dotnet-runtime",
@@ -24,6 +22,7 @@
 		},
     "ghcr.io/devcontainers/features/powershell:1": {
       "installBicep": true
-    }
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
   }
 }
